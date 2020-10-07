@@ -8,7 +8,9 @@
 
 import UIKit
 
-class AlarmsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AlarmCellDelegate, AlarmViewControllerDelegate {
+class AlarmsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AlarmCellDelegate, AlarmDetailVCDelegate {
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     var alarms = [Alarm]()
@@ -33,6 +35,7 @@ class AlarmsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
+    // Default alarms
     func populateAlarms() {
         
         var alarm: Alarm
@@ -123,13 +126,13 @@ class AlarmsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func presentAlarmViewController(alarm: Alarm?) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let popupViewController = storyboard.instantiateViewController(withIdentifier: "DetailNavigationController") as! UINavigationController
-        let alarmViewController = popupViewController.viewControllers[0] as! AlarmViewController
-        alarmViewController.alarm = alarm
-        alarmViewController.delegate = self
+        let alarmDetailVC = popupViewController.viewControllers[0] as! AlarmDetailViewController
+        alarmDetailVC.alarm = alarm
+        alarmDetailVC.delegate = self
         present(popupViewController, animated: true, completion: nil)
     }
     
-    func alarmViewControllerDone(alarm: Alarm) {
+    func alarmDetailVCDone(alarm: Alarm) {
         if let editingIndexPath = editingIndexPath {
             tableView.reloadRows(at: [editingIndexPath], with: .automatic)
         }
@@ -139,8 +142,10 @@ class AlarmsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         editingIndexPath = nil
     }
     
-    func alarmViewControllerCancel() {
+    func alarmDetailVCCancel() {
         editingIndexPath = nil
     }
 }
+
+
 

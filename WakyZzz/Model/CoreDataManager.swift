@@ -13,6 +13,8 @@ class CoreDataManager {
     
     static let shared = CoreDataManager()
     
+    private let context = AppDelegate.context
+    
     //MARK: - Fetching data methods
     
     /// Will get all alarms from coredata
@@ -67,8 +69,47 @@ class CoreDataManager {
     //MARK: - Data manipulation methods
     public func createAlarm(_ alarm: Alarm) {
         
-        let context = AppDelegate.context
+        let newAlarm = AlarmEntity(context: context)
+        newAlarm.updateBy(alarm: alarm)
         
+        self.saveContext()
+    }
+    
+    public func updateAlarm(_ alarm: Alarm) {
+        
+        let updateAlarm = self.fetchSingleAlarm(id: alarm.id, in: context)
+        updateAlarm!.updateBy(alarm: alarm)
+        
+        self.saveContext()
+    }
+    
+    public func removeAlarm(_ alarm: Alarm) {
+        
+        let removeAlarm = self.fetchSingleAlarm(id: alarm.id, in: context)
+        
+        if removeAlarm != nil {
+            self.context.delete(removeAlarm!)
+            self.saveContext()
+        }
+    }
+    
+    public func removeAllAlarms() {
+        
+        let allAlarms = self.fetchAllAlarms()
+        
+        allAlarms.forEach { context.delete($0) }
+        
+        self.saveContext()
         
     }
+    
+    public func saveContext() {
+        do {
+            try self.context.save()
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+    }
+    
 }
