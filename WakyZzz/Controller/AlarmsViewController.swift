@@ -89,7 +89,7 @@ class AlarmsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func deleteAlarm(at indexPath: IndexPath) {
         tableView.beginUpdates()
-        alarms.remove(at: alarms.count)
+        alarms.remove(at: alarms.count - 1)
         tableView.deleteRows(at: [indexPath], with: .automatic)
         tableView.endUpdates()
     }
