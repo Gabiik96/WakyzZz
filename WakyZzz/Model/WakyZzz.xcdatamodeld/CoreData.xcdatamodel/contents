@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AlarmEntity" representedClassName=".AlarmEntity" syncable="YES">
+        <attribute name="friOn" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="monOn" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="satOn" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="sunOn" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="thuOn" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="time" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tueOn" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="wedOn" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="AlarmEntity" positionX="-63" positionY="-18" width="128" height="193"/>
+    </elements>
+</model>

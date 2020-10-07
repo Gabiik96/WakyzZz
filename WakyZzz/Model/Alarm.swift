@@ -8,11 +8,12 @@
 
 import Foundation 
 
-class Alarm { 
+public class Alarm { 
     
     static let daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     
-    var time = 8 * 360
+    var id = UUID()
+    var time = 8 * 3600
     var repeatDays = [false, false, false, false, false, false, false]
     var enabled = true
     
