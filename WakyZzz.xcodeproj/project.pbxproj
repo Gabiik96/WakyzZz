@@ -23,6 +23,7 @@
 		426A1C25252E2A360009A3FF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A1C24252E2A360009A3FF /* CoreDataManager.swift */; };
 		42847935252E442200811EC8 /* AlarmDetailVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42847934252E442200811EC8 /* AlarmDetailVCDelegate.swift */; };
 		42847937252E44A400811EC8 /* AlarmCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42847936252E44A400811EC8 /* AlarmCellDelegate.swift */; };
+		42D46578252F95890062E17D /* evilSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42D46577252F95890062E17D /* evilSound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		426A1C24252E2A360009A3FF /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		42847934252E442200811EC8 /* AlarmDetailVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailVCDelegate.swift; sourceTree = "<group>"; };
 		42847936252E44A400811EC8 /* AlarmCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCellDelegate.swift; sourceTree = "<group>"; };
+		42D46577252F95890062E17D /* evilSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = evilSound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		426A1C14252E1F0C0009A3FF /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				42D46577252F95890062E17D /* evilSound.mp3 */,
 				0424EB7020C038AE00E15E46 /* sound.mp3 */,
 			);
 			name = Sounds;
@@ -223,6 +226,7 @@
 				0424EB7120C038AE00E15E46 /* sound.mp3 in Resources */,
 				0424EB5E20BEF89100E15E46 /* LaunchScreen.storyboard in Resources */,
 				0424EB5B20BEF89100E15E46 /* Assets.xcassets in Resources */,
+				42D46578252F95890062E17D /* evilSound.mp3 in Resources */,
 				0424EB5920BEF89000E15E46 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
