@@ -31,6 +31,9 @@ class AlarmDetailViewController: UIViewController {
         if alarm == nil {
             navigationItem.title = "New Alarm"
             alarm = Alarm()
+            
+            datePicker.date = (alarm?.alarmDate)!
+            
             // Save new alarm into CoreData
             coreData.createAlarm(alarm!)
         }
@@ -40,8 +43,6 @@ class AlarmDetailViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        datePicker.date = (alarm?.alarmDate)!
     }
     
     // MARK: - IBActions
