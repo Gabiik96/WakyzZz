@@ -17,7 +17,7 @@ extension AlarmEntity {
         return NSFetchRequest<AlarmEntity>(entityName: "AlarmEntity")
     }
 
-    @NSManaged public var id: UUID
+    @NSManaged public var id: String
     @NSManaged public var isActive: Bool
     @NSManaged public var time: Int32
     @NSManaged public var monOn: Bool

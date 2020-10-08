@@ -51,7 +51,7 @@ class CoreDataManager {
     }
     
     /// Will get single alarm from coredata with corresponding ID
-    public func fetchSingleAlarm(id: UUID, in context: NSManagedObjectContext) -> AlarmEntity? {
+    public func fetchSingleAlarm(id: String, in context: NSManagedObjectContext) -> AlarmEntity? {
         
         let fetchRequest: NSFetchRequest<AlarmEntity> = AlarmEntity.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "id = %@", id as CVarArg)

@@ -12,10 +12,12 @@ public class Alarm {
     
     static let daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     
-    var id = UUID()
+    var id = UUID().uuidString
     var time = 8 * 3600
     var repeatDays = [false, false, false, false, false, false, false]
     var enabled = true
+    var snoozed = 0
+    var isEvilOn = false
     
     var alarmDate: Date? {
         let date = Date()
@@ -50,9 +52,33 @@ public class Alarm {
     
     func setTime(date: Date) {
         let calendar = Calendar.current
-        var components = calendar.dateComponents([.hour, .minute, .month, .year, .day, .second, .weekOfMonth], from: date as Date)
+        let components = calendar.dateComponents([.hour, .minute, .month, .year, .day, .second, .weekOfMonth], from: date as Date)
         
         time = components.hour! * 3600 + components.minute! * 60        
     }
-
+    
+    func snoozeAlarm() {
+        let calendar = Calendar.current
+        let oldComponents = calendar.dateComponents([.hour, .minute, .month, .year, .day, .second, .weekOfMonth], from: alarmDate! as Date)
+        var newComponents = oldComponents
+        newComponents.minute! += 5
+        
+        setTime(date: calendar.date(from: newComponents)!)
+    }
+    
+    func setToOrigin() {
+        let calendar = Calendar.current
+        let oldComponents = calendar.dateComponents([.hour, .minute, .month, .year, .day, .second, .weekOfMonth], from: alarmDate! as Date)
+        var newComponents = oldComponents
+        
+        if self.snoozed == 0 {
+            setTime(date: alarmDate!)
+        } else if self.snoozed == 1 {
+            newComponents.minute! -= 5
+            setTime(date: calendar.date(from: newComponents)!)
+        } else if self.snoozed == 2 {
+            newComponents.minute! -= 10
+            setTime(date: calendar.date(from: newComponents)!)
+        }
+    }
 }
