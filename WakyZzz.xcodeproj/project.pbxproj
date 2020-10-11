@@ -30,6 +30,7 @@
 		42F94C822533AC1900345E9C /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F94C812533AC1900345E9C /* CoreDataTests.swift */; };
 		42F94C8B2533AD2600345E9C /* AudioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F94C892533AD2600345E9C /* AudioTests.swift */; };
 		42F94C8E2533B57300345E9C /* NotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F94C8C2533B57300345E9C /* NotificationsTests.swift */; };
+		42F94C902533BE3900345E9C /* AlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F94C8F2533BE3900345E9C /* AlarmTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		42F94C832533AC1900345E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42F94C892533AD2600345E9C /* AudioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTests.swift; sourceTree = "<group>"; };
 		42F94C8C2533B57300345E9C /* NotificationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTests.swift; sourceTree = "<group>"; };
+		42F94C8F2533BE3900345E9C /* AlarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 		42F94C802533AC1900345E9C /* WakyZzzTests */ = {
 			isa = PBXGroup;
 			children = (
+				42F94C8F2533BE3900345E9C /* AlarmTests.swift */,
 				42F94C812533AC1900345E9C /* CoreDataTests.swift */,
 				42F94C8C2533B57300345E9C /* NotificationsTests.swift */,
 				42F94C892533AD2600345E9C /* AudioTests.swift */,
@@ -340,6 +343,7 @@
 				42F94C8B2533AD2600345E9C /* AudioTests.swift in Sources */,
 				42F94C822533AC1900345E9C /* CoreDataTests.swift in Sources */,
 				42F94C8E2533B57300345E9C /* NotificationsTests.swift in Sources */,
+				42F94C902533BE3900345E9C /* AlarmTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

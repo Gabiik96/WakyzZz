@@ -69,7 +69,7 @@ public class Alarm: NSObject {
     func snoozeAlarm() {
         let calendar = Calendar.current
         var components = calendar.dateComponents([.hour, .minute, .month, .year, .day, .second, .weekOfMonth], from: alarmDate! as Date)
-        components.minute! += 1
+        components.minute! += 5
         
         setTime(date: calendar.date(from: components)!)
     }
@@ -79,11 +79,13 @@ public class Alarm: NSObject {
         var components = calendar.dateComponents([.hour, .minute, .month, .year, .day, .second, .weekOfMonth], from: alarmDate! as Date)
         
         if self.snoozed == 1 {
-            components.minute! -= 1
+            components.minute! -= 5
             setTime(date: calendar.date(from: components)!)
         } else if self.snoozed == 2 {
-            components.minute! -= 2
+            components.minute! -= 10
             setTime(date: calendar.date(from: components)!)
         }
+        
+        self.snoozed = 0
     }
 }
