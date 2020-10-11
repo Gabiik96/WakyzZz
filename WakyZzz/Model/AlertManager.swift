@@ -31,7 +31,7 @@ class AlertManager {
         
         // Adding sound effect
         if alarm.isEvilOn == true {
-            self.notifContent.sound = UNNotificationSound(named: UNNotificationSoundName("evilsound.mp3"))
+            self.notifContent.sound = UNNotificationSound(named: UNNotificationSoundName("evilSound.mp3"))
         } else {
         self.notifContent.sound = UNNotificationSound(named: UNNotificationSoundName("sound.mp3"))
         }

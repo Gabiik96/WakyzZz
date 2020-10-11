@@ -13,7 +13,7 @@ class AudioPlayerManager {
     var player: AVAudioPlayer!
 
     func playSound(evilOn: Bool) {
-        let soundName = evilOn ? "evilsound" : "sound"
+        let soundName = evilOn ? "evilSound" : "sound"
         guard let url = Bundle.main.url(forResource: soundName, withExtension: "mp3") else { return }
 
         do {
