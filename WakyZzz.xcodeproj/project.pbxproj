@@ -23,8 +23,22 @@
 		426A1C25252E2A360009A3FF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A1C24252E2A360009A3FF /* CoreDataManager.swift */; };
 		42847935252E442200811EC8 /* AlarmDetailVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42847934252E442200811EC8 /* AlarmDetailVCDelegate.swift */; };
 		42847937252E44A400811EC8 /* AlarmCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42847936252E44A400811EC8 /* AlarmCellDelegate.swift */; };
-		42D46578252F95890062E17D /* evilSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42D46577252F95890062E17D /* evilSound.mp3 */; };
+		42D46578252F95890062E17D /* evilsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 42D46577252F95890062E17D /* evilsound.mp3 */; };
+		42D4657A252F96E60062E17D /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D46579252F96E60062E17D /* AlertManager.swift */; };
+		42D4657C252FA3140062E17D /* KarmaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D4657B252FA3140062E17D /* KarmaManager.swift */; };
+		42D4657E252FA8700062E17D /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D4657D252FA8700062E17D /* AudioPlayerManager.swift */; };
+		42F94C822533AC1900345E9C /* WakyZzzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F94C812533AC1900345E9C /* WakyZzzTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		42F94C842533AC1900345E9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0424EB4820BEF89000E15E46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0424EB4F20BEF89000E15E46;
+			remoteInfo = WakyZzz;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0424EB5020BEF89000E15E46 /* WakyZzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakyZzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,11 +59,24 @@
 		426A1C24252E2A360009A3FF /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		42847934252E442200811EC8 /* AlarmDetailVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailVCDelegate.swift; sourceTree = "<group>"; };
 		42847936252E44A400811EC8 /* AlarmCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCellDelegate.swift; sourceTree = "<group>"; };
-		42D46577252F95890062E17D /* evilSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = evilSound.mp3; sourceTree = "<group>"; };
+		42D46577252F95890062E17D /* evilsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = evilsound.mp3; sourceTree = "<group>"; };
+		42D46579252F96E60062E17D /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		42D4657B252FA3140062E17D /* KarmaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KarmaManager.swift; sourceTree = "<group>"; };
+		42D4657D252FA8700062E17D /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
+		42F94C7F2533AC1900345E9C /* WakyZzzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WakyZzzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42F94C812533AC1900345E9C /* WakyZzzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakyZzzTests.swift; sourceTree = "<group>"; };
+		42F94C832533AC1900345E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0424EB4D20BEF89000E15E46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42F94C7C2533AC1900345E9C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				0424EB5220BEF89000E15E46 /* WakyZzz */,
+				42F94C802533AC1900345E9C /* WakyZzzTests */,
 				0424EB5120BEF89000E15E46 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				0424EB5020BEF89000E15E46 /* WakyZzz.app */,
+				42F94C7F2533AC1900345E9C /* WakyZzzTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,10 +107,10 @@
 		0424EB5220BEF89000E15E46 /* WakyZzz */ = {
 			isa = PBXGroup;
 			children = (
-				426A1C23252E2A250009A3FF /* Manager */,
 				426A1C10252E1EA80009A3FF /* Model */,
 				426A1C11252E1EB30009A3FF /* View */,
 				426A1C12252E1EBF0009A3FF /* Controller */,
+				426A1C23252E2A250009A3FF /* Manager */,
 				426A1C13252E1EEF0009A3FF /* Supporting files */,
 			);
 			path = WakyZzz;
@@ -90,9 +119,9 @@
 		426A1C10252E1EA80009A3FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				426A1C15252E1FB30009A3FF /* CoreData */,
 				0424EB6820BEF93F00E15E46 /* Alarm.swift */,
 				0424EB6A20BEF96400E15E46 /* Action.swift */,
+				426A1C15252E1FB30009A3FF /* CoreData */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,9 +139,9 @@
 		426A1C12252E1EBF0009A3FF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				42847933252E43F600811EC8 /* Delegates */,
 				0424EB5520BEF89000E15E46 /* AlarmsViewController.swift */,
 				0424EB6E20BF0FAE00E15E46 /* AlarmDetailViewController.swift */,
+				42847933252E43F600811EC8 /* Delegates */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -131,7 +160,7 @@
 		426A1C14252E1F0C0009A3FF /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				42D46577252F95890062E17D /* evilSound.mp3 */,
+				42D46577252F95890062E17D /* evilsound.mp3 */,
 				0424EB7020C038AE00E15E46 /* sound.mp3 */,
 			);
 			name = Sounds;
@@ -151,6 +180,9 @@
 			isa = PBXGroup;
 			children = (
 				426A1C24252E2A360009A3FF /* CoreDataManager.swift */,
+				42D46579252F96E60062E17D /* AlertManager.swift */,
+				42D4657B252FA3140062E17D /* KarmaManager.swift */,
+				42D4657D252FA8700062E17D /* AudioPlayerManager.swift */,
 			);
 			name = Manager;
 			path = Model;
@@ -163,6 +195,15 @@
 				42847936252E44A400811EC8 /* AlarmCellDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		42F94C802533AC1900345E9C /* WakyZzzTests */ = {
+			isa = PBXGroup;
+			children = (
+				42F94C812533AC1900345E9C /* WakyZzzTests.swift */,
+				42F94C832533AC1900345E9C /* Info.plist */,
+			);
+			path = WakyZzzTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,18 +226,40 @@
 			productReference = 0424EB5020BEF89000E15E46 /* WakyZzz.app */;
 			productType = "com.apple.product-type.application";
 		};
+		42F94C7E2533AC1900345E9C /* WakyZzzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42F94C862533AC1900345E9C /* Build configuration list for PBXNativeTarget "WakyZzzTests" */;
+			buildPhases = (
+				42F94C7B2533AC1900345E9C /* Sources */,
+				42F94C7C2533AC1900345E9C /* Frameworks */,
+				42F94C7D2533AC1900345E9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42F94C852533AC1900345E9C /* PBXTargetDependency */,
+			);
+			name = WakyZzzTests;
+			productName = WakyZzzTests;
+			productReference = 42F94C7F2533AC1900345E9C /* WakyZzzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		0424EB4820BEF89000E15E46 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 1170;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Olga Volkova OC";
 				TargetAttributes = {
 					0424EB4F20BEF89000E15E46 = {
 						CreatedOnToolsVersion = 9.3.1;
+					};
+					42F94C7E2533AC1900345E9C = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 0424EB4F20BEF89000E15E46;
 					};
 				};
 			};
@@ -214,6 +277,7 @@
 			projectRoot = "";
 			targets = (
 				0424EB4F20BEF89000E15E46 /* WakyZzz */,
+				42F94C7E2533AC1900345E9C /* WakyZzzTests */,
 			);
 		};
 /* End PBXProject section */
@@ -226,8 +290,15 @@
 				0424EB7120C038AE00E15E46 /* sound.mp3 in Resources */,
 				0424EB5E20BEF89100E15E46 /* LaunchScreen.storyboard in Resources */,
 				0424EB5B20BEF89100E15E46 /* Assets.xcassets in Resources */,
-				42D46578252F95890062E17D /* evilSound.mp3 in Resources */,
+				42D46578252F95890062E17D /* evilsound.mp3 in Resources */,
 				0424EB5920BEF89000E15E46 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42F94C7D2533AC1900345E9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,12 +310,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0424EB5620BEF89000E15E46 /* AlarmsViewController.swift in Sources */,
+				42D4657E252FA8700062E17D /* AudioPlayerManager.swift in Sources */,
 				0424EB6D20BF022900E15E46 /* AlarmTableViewCell.swift in Sources */,
 				426A1C22252E274B0009A3FF /* AlarmEntity+CoreDataProperties.swift in Sources */,
+				42D4657A252F96E60062E17D /* AlertManager.swift in Sources */,
 				0424EB6F20BF0FAE00E15E46 /* AlarmDetailViewController.swift in Sources */,
 				0424EB5420BEF89000E15E46 /* AppDelegate.swift in Sources */,
 				426A1C21252E274B0009A3FF /* AlarmEntity+CoreDataClass.swift in Sources */,
 				0424EB6B20BEF96400E15E46 /* Action.swift in Sources */,
+				42D4657C252FA3140062E17D /* KarmaManager.swift in Sources */,
 				42847935252E442200811EC8 /* AlarmDetailVCDelegate.swift in Sources */,
 				0424EB6920BEF93F00E15E46 /* Alarm.swift in Sources */,
 				426A1C25252E2A360009A3FF /* CoreDataManager.swift in Sources */,
@@ -253,7 +327,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		42F94C7B2533AC1900345E9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42F94C822533AC1900345E9C /* WakyZzzTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42F94C852533AC1900345E9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0424EB4F20BEF89000E15E46 /* WakyZzz */;
+			targetProxy = 42F94C842533AC1900345E9C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0424EB5720BEF89000E15E46 /* Main.storyboard */ = {
@@ -394,6 +484,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4YKPW2G86;
 				INFOPLIST_FILE = "WakyZzz/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -401,7 +492,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.openclassrooms.WakyZzz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -411,6 +502,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4YKPW2G86;
 				INFOPLIST_FILE = "WakyZzz/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -418,8 +510,53 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.openclassrooms.WakyZzz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		42F94C872533AC1900345E9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4YKPW2G86;
+				INFOPLIST_FILE = WakyZzzTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = GabrielBalta.WakyZzzTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WakyZzz.app/WakyZzz";
+			};
+			name = Debug;
+		};
+		42F94C882533AC1900345E9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4YKPW2G86;
+				INFOPLIST_FILE = WakyZzzTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = GabrielBalta.WakyZzzTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WakyZzz.app/WakyZzz";
 			};
 			name = Release;
 		};
@@ -440,6 +577,15 @@
 			buildConfigurations = (
 				0424EB6320BEF89100E15E46 /* Debug */,
 				0424EB6420BEF89100E15E46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42F94C862533AC1900345E9C /* Build configuration list for PBXNativeTarget "WakyZzzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42F94C872533AC1900345E9C /* Debug */,
+				42F94C882533AC1900345E9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
