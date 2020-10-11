@@ -28,17 +28,18 @@ class AlarmDetailViewController: UIViewController {
     
     // Will configuration current VC with alarm
     func config() {        
-        if alarm == nil {
-            navigationItem.title = "New Alarm"
-            alarm = Alarm()
+        if alarm != nil {
+            navigationItem.title = "Edit Alarm"
             
             datePicker.date = (alarm?.alarmDate)!
-            
-            // Save new alarm into CoreData
-            coreData.createAlarm(alarm!)
         }
         else {
-            navigationItem.title = "Edit Alarm"
+            navigationItem.title = "New Alarm"
+            alarm = Alarm()
+            // Set default time on UI
+            datePicker.setDate(alarm!.setDefaultTime(), animated: true)
+            // Save new alarm into CoreData
+            coreData.createAlarm(alarm!)
         }
         
         tableView.delegate = self
@@ -47,6 +48,9 @@ class AlarmDetailViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func cancelButtonPress(_ sender: Any) {
+        if self.alarm != nil {
+            coreData.removeAlarm(alarm!)
+        }
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
