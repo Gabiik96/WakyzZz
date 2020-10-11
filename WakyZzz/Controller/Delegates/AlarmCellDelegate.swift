@@ -11,3 +11,5 @@ import Foundation
 protocol AlarmCellDelegate {
     func alarmCell(_ cell: AlarmTableViewCell, enabledChanged enabled: Bool)
 }
+
+

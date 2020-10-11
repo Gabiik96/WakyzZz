@@ -78,7 +78,9 @@ class CoreDataManager {
     public func updateAlarm(_ alarm: Alarm) {
         
         let updateAlarm = self.fetchSingleAlarm(id: alarm.id, in: context)
-        updateAlarm!.updateBy(alarm: alarm)
+        if updateAlarm != nil {
+            updateAlarm!.updateBy(alarm: alarm)
+        }
         
         self.saveContext()
     }

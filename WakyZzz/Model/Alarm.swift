@@ -8,12 +8,12 @@
 
 import Foundation 
 
-public class Alarm { 
+public class Alarm: NSObject { 
     
     static let daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     
     var id = UUID().uuidString
-    var time = 8 * 3600
+    var time = 0
     var repeatDays = [false, false, false, false, false, false, false]
     var enabled = true
     var snoozed = 0
@@ -57,28 +57,33 @@ public class Alarm {
         time = components.hour! * 3600 + components.minute! * 60        
     }
     
+    func setDefaultTime() -> Date {
+        let calendar = Calendar.current
+        var dateComponent = DateComponents()
+        dateComponent.hour = 08
+        dateComponent.minute = 00
+        
+        return calendar.date(from: dateComponent)!
+    }
+    
     func snoozeAlarm() {
         let calendar = Calendar.current
-        let oldComponents = calendar.dateComponents([.hour, .minute, .month, .year, .day, .second, .weekOfMonth], from: alarmDate! as Date)
-        var newComponents = oldComponents
-        newComponents.minute! += 5
+        var components = calendar.dateComponents([.hour, .minute, .month, .year, .day, .second, .weekOfMonth], from: alarmDate! as Date)
+        components.minute! += 1
         
-        setTime(date: calendar.date(from: newComponents)!)
+        setTime(date: calendar.date(from: components)!)
     }
     
     func setToOrigin() {
         let calendar = Calendar.current
-        let oldComponents = calendar.dateComponents([.hour, .minute, .month, .year, .day, .second, .weekOfMonth], from: alarmDate! as Date)
-        var newComponents = oldComponents
+        var components = calendar.dateComponents([.hour, .minute, .month, .year, .day, .second, .weekOfMonth], from: alarmDate! as Date)
         
-        if self.snoozed == 0 {
-            setTime(date: alarmDate!)
-        } else if self.snoozed == 1 {
-            newComponents.minute! -= 5
-            setTime(date: calendar.date(from: newComponents)!)
+        if self.snoozed == 1 {
+            components.minute! -= 1
+            setTime(date: calendar.date(from: components)!)
         } else if self.snoozed == 2 {
-            newComponents.minute! -= 10
-            setTime(date: calendar.date(from: newComponents)!)
+            components.minute! -= 2
+            setTime(date: calendar.date(from: components)!)
         }
     }
 }
