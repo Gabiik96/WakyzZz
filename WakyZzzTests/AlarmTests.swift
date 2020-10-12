@@ -29,7 +29,7 @@ class AlarmTests: XCTestCase {
         
         XCTAssert(timeBeforeSnooze.hour == timeAfterSnooze.hour,
                   "Failed, hour should match")
-        XCTAssert(timeBeforeSnooze.minute == (timeAfterSnooze.minute! - 5),
+        XCTAssert(timeBeforeSnooze.minute == (timeAfterSnooze.minute! - 10),
                   "Failed, minute - 5 should be original time of alarm")
         
         alarm.snoozeAlarm()
@@ -38,7 +38,7 @@ class AlarmTests: XCTestCase {
         
         XCTAssert(timeBeforeSnooze.hour == timeAfterSecondSnooze.hour,
                   "Failed, hour should match")
-        XCTAssert(timeBeforeSnooze.minute == (timeAfterSecondSnooze.minute! - 10),
+        XCTAssert(timeBeforeSnooze.minute == (timeAfterSecondSnooze.minute! - 20),
                   "Failed, minute - 10 should be original time of alarm")
         
         // Test for snoozed with hour change

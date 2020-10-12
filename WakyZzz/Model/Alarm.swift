@@ -59,17 +59,17 @@ public class Alarm: NSObject {
     
     func setDefaultTime() -> Date {
         let calendar = Calendar.current
-        var dateComponent = DateComponents()
-        dateComponent.hour = 08
-        dateComponent.minute = 00
+        var components = DateComponents()
+        components.hour = 08
+        components.minute = 00
         
-        return calendar.date(from: dateComponent)!
+        return calendar.date(from: components)!
     }
     
     func snoozeAlarm() {
         let calendar = Calendar.current
         var components = calendar.dateComponents([.hour, .minute, .month, .year, .day, .second, .weekOfMonth], from: alarmDate! as Date)
-        components.minute! += 5
+        components.minute! += 10
         
         setTime(date: calendar.date(from: components)!)
     }
@@ -79,10 +79,10 @@ public class Alarm: NSObject {
         var components = calendar.dateComponents([.hour, .minute, .month, .year, .day, .second, .weekOfMonth], from: alarmDate! as Date)
         
         if self.snoozed == 1 {
-            components.minute! -= 5
+            components.minute! -= 10
             setTime(date: calendar.date(from: components)!)
         } else if self.snoozed == 2 {
-            components.minute! -= 10
+            components.minute! -= 20
             setTime(date: calendar.date(from: components)!)
         }
         

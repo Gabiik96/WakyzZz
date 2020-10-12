@@ -25,9 +25,9 @@ class KarmaManager {
         var components = calendar.dateComponents([.hour, .minute, .month, .year, .day], from: date)
         
         // Deployment value
-//        components.hour = components.hour! + 3
+        components.hour! += 3
         // Test value
-        components.minute = components.minute! + 5
+//        components.minute! += 5
     
         self.date = calendar.date(from: components)!
         self.notifContent.title = "Karma is coming !"
